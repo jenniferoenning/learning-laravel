@@ -25,4 +25,9 @@ class HomeController extends Controller
     {
         return view(PLATFORM . '.pages.index');
     }
+
+    public function perfil()
+    {
+        return view(PLATFORM . '.pages.perfil');
+    }
 }
