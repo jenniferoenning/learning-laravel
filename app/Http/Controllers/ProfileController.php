@@ -27,4 +27,9 @@ class ProfileController extends Controller
         $user = Auth::user();
         return view(PLATFORM . '.pages.perfil')->with(compact('user'));
     }
+
+    public function profileUser($name) {
+        $users = User::all();
+        return view(PLATFORM . '.pages.perfil')->with(compact('users'));
+    }
 }

@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\User;
+use Illuminate\Support\Str;
 
 class HomeController extends Controller
 {
@@ -23,6 +25,20 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view(PLATFORM . '.pages.index');
+        $users = User::all();
+        return view(PLATFORM . '.pages.index')->with(compact('users'));
     }
+/*
+    public function changeSlugUsers()
+    {
+        $changeSlugUsers = User::all();
+
+        foreach ($changeSlugUsers as $changeSlugUser) {
+            if($changeSlugUser->slug === null) {
+                $changeSlugUser->slug = Str::slug($changeSlugUser['name'], '-');
+                $changeSlugUser->save();
+            }
+        }
+        dd($changeSlugUsers);
+    }*/
 }
