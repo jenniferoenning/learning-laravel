@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class HomeController extends Controller
+class ProfileController extends Controller
 {
     /**
      * Create a new controller instance.
@@ -17,12 +17,12 @@ class HomeController extends Controller
     }
 
     /**
-     * Show the application dashboard.
+     * Display a listing of the resource.
      *
-     * @return \Illuminate\Contracts\Support\Renderable
+     * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function perfil()
     {
-        return view(PLATFORM . '.pages.index');
+       return view(PLATFORM . '.pages.perfil');
     }
 }

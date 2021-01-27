@@ -3,6 +3,9 @@
 @section('content')
 <div class="container">
     <div class="row justify-content-center">
+        <div class="col-md-8 my-4 d-flex justify-content-center">
+            <img class="rounded-circle" src="" id="avatarShow" alt="">
+        </div>
         <div class="col-md-8">
             <div class="card">
                 <div class="card-header">{{ __('Registre-se') }}</div>
@@ -93,7 +96,7 @@
                         <div class="form-group row">
                             <label for="avatar" class="col-md-4 form-label text-md-right">{{ __('Avatar') }}</label>
                             <div class="col-md-6">
-                                <input type="file" name="avatar" id="avatar" class="form-control form-control p-1" required>
+                                <input type="file" name="avatar" id="avatar" class="form-control form-control p-1" onchange="getImage(this);" required>
                             </div>
                         </div>
 
@@ -111,3 +114,18 @@
     </div>
 </div>
 @endsection
+
+@push('scripts')
+<script>
+    function getImage(input) {
+        var reader = new FileReader();
+        reader.onload = function (e) {
+          $('#avatarShow')
+            .attr('src', e.target.result)
+            .width(140)
+            .height(140);
+        };
+        reader.readAsDataURL(input.files[0]);
+    }
+</script>
+@endpush

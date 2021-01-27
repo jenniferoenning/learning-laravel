@@ -20,4 +20,4 @@ Route::group(['middleware' => 'web'], function() {
 	Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('index');
 });
 
-Route::get('/perfil', [App\Http\Controllers\HomeController::class, 'perfil'])->name('perfil');
+Route::get('/perfil', [App\Http\Controllers\ProfileController::class, 'perfil'])->name('perfil');
