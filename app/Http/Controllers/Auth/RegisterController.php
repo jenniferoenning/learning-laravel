@@ -8,6 +8,7 @@ use App\Models\User;
 use Illuminate\Foundation\Auth\RegistersUsers;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
+use Illuminate\Support\Str;
 
 class RegisterController extends Controller
 {
@@ -73,9 +74,10 @@ class RegisterController extends Controller
         ]);
 
         if(request()->hasFile('avatar')) {
+            $uuid = (string) Str::uuid();
             $avatar = request()->file('avatar')->getClientOriginalName();
-            request()->file('avatar')->storeAs('avatars', $user->id . '/' . $avatar, '');
-            $user->update(['avatar' => $avatar]);
+            request()->file('avatar')->storeAs("avatars/$user->id", $uuid . '.' . request()->file('avatar')->clientExtension() , 'public');
+            $user->update(['avatar' => $uuid . '.' . request()->file('avatar')->clientExtension()]);
         }
 
         return $user;

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class ProfileController extends Controller
 {
@@ -23,6 +24,7 @@ class ProfileController extends Controller
      */
     public function perfil()
     {
-       return view(PLATFORM . '.pages.perfil');
+        $user = Auth::user();
+        return view(PLATFORM . '.pages.perfil')->with(compact('user'));
     }
 }
