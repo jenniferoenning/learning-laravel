@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\User;
 use Illuminate\Support\Str;
+use Illuminate\Support\Facades\Auth;
 
 class HomeController extends Controller
 {
@@ -26,7 +27,8 @@ class HomeController extends Controller
     public function index()
     {
         $users = User::all();
-        return view(PLATFORM . '.pages.index')->with(compact('users'));
+        $slugUser = Auth::user();
+        return view(PLATFORM . '.pages.index')->with(compact('users','slugUser'));
     }
 /*
     public function changeSlugUsers()

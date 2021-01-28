@@ -42,7 +42,7 @@
                                                  document.getElementById('logout-form').submit();">
                                     {{ __('Deslogar') }}
                                 </a>
-                                <a href="{{ route('perfil') }}" class="dropdown-item">Perfil</a>
+                                <a href="{{ $slugUser->slug }}" class="dropdown-item">Perfil</a>
 
                                 <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
                                     @csrf

@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use App\Models\User;
+use Illuminate\Support\Str;
 
 class ProfileController extends Controller
 {
@@ -22,14 +24,11 @@ class ProfileController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function perfil()
-    {
-        $user = Auth::user();
-        return view(PLATFORM . '.pages.perfil')->with(compact('user'));
-    }
 
-    public function profileUser($name) {
-        $users = User::all();
-        return view(PLATFORM . '.pages.perfil')->with(compact('users'));
+    public function show($slug)
+    {
+        $slugUser = Auth::user();
+        $user = User::all()->where('slug', $slug)->first();
+        return view(PLATFORM . '.pages.perfil')->with(compact('user','slugUser'));
     }
 }
