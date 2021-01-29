@@ -6,12 +6,6 @@ Fiz este projeto para aprender o Framework Laravel de PHP, este projeto é para 
 
 Caso tenha interesse de ajudar neste projeto fiquem a vontade para utilizar a ferramenta <strong>Fork</strong>
 
-
-## Algumas telas
-
-![alt text](https://i.imgur.com/92j78Dr.png)
-![alt text](https://i.imgur.com/3acD5JJ.png)
-
 ## Comandos:
 
 1 - Clone o projeto.
@@ -27,3 +21,7 @@ Caso tenha interesse de ajudar neste projeto fiquem a vontade para utilizar a fe
 
 - Thanks for visiting! :D
 
+## Algumas telas
+
+![alt text](https://i.imgur.com/92j78Dr.png)
+![alt text](https://i.imgur.com/3acD5JJ.png)
