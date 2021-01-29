@@ -4,7 +4,7 @@ Olá pessoal 👋 tudo bem?
 
 Fiz este projeto para aprender o Framework Laravel de PHP, este projeto é para ser bem simples usando o Auth integrado do laravel 8.x, espero que gostem e aprendam junto comigo!
 
-Caso tenha interesse de ajudar neste problema fique a vontade para utilizar a ferramenta <strong>Fork</strong>
+Caso tenha interesse de ajudar neste projeto fiquem a vontade para utilizar a ferramenta <strong>Fork</strong>
 
 
 ## Algumas telas
