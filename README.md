@@ -9,10 +9,10 @@ Caso tenha interesse de ajudar neste problema fique a vontade para utilizar a fe
 
 ## Algumas telas
 
-![alt text](https://imgur.com/92j78Dr)
-![alt text](https://imgur.com/3acD5JJ)
-![alt text](https://imgur.com/jLD5d54)
-![alt text](https://imgur.com/6aRV46A)
+![alt text](https://i.imgur.com/92j78Dr.png)
+![alt text](https://i.imgur.com/3acD5JJ.png)
+![alt text](https://i.imgur.com/jLD5d54.png)
+![alt text](https://i.imgur.com/6aRV46A.png)
 
 - Thanks for visiting! :D
 
