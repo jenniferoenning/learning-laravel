@@ -13,9 +13,9 @@ class AlterUsersTableAddSlug extends Migration
      */
     public function up()
     {
-        Schema::table('users', function (Blueprint $table) {
-            $table->string('slug')->nullable();
-        });
+        // Schema::table('users', function (Blueprint $table) {
+        //     $table->string('slug')->nullable();
+        // });
     }
 
     /**
@@ -25,8 +25,8 @@ class AlterUsersTableAddSlug extends Migration
      */
     public function down()
     {
-        Schema::table('users', function (Blueprint $table) {
-            $table->dropColumn();
-        });
+        // Schema::table('users', function (Blueprint $table) {
+        //     $table->dropColumn();
+        // });
     }
 }
