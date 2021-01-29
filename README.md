@@ -11,8 +11,19 @@ Caso tenha interesse de ajudar neste projeto fiquem a vontade para utilizar a fe
 
 ![alt text](https://i.imgur.com/92j78Dr.png)
 ![alt text](https://i.imgur.com/3acD5JJ.png)
-![alt text](https://i.imgur.com/jLD5d54.png)
-![alt text](https://i.imgur.com/6aRV46A.png)
+
+## Comandos:
+
+1 - Clone o projeto.
+
+2 - Navegue até a pasta e instale o composer `composer install`.
+    obs: Uso o docker então já tenho todo o ambiente composer instalado no workspace.
+    
+3 - Crie o banco de dados configure seu `.env.example` para `.env`, seu banco de dados também e adicione a variável `APP_URL=[ URL DO SEU SITE LOCAL ]`.
+
+4 - Para executar todas as suas migrations pendentes, execute o  `composer artisan migrate`.
+
+5 - Para criar o link simbólico, você pode executar `php artisan storage:link`.
 
 - Thanks for visiting! :D
 
