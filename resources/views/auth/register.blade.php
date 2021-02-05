@@ -47,8 +47,14 @@
 
                             <div class="col-md-6">
                                 <select class="form-control" name="work" id="work" value="{{ old('work') }}">
-                                  <option value="front-end">Frontend</option>
-                                  <option value="back-end">Backend</option>
+                                    <option value="Full-Stack">Full Stack</option>
+                                    <option value="front-end">Front-end</option>
+                                    <option value="back-end">Back-end</option>
+                                    <option value="Programador Junior">Programador Junior</option>
+                                    <option value="Programador Pleno">Programador Pleno</option>
+                                    <option value="Programador Senior">Programador Senior</option>
+                                    <option value="Gestor de Projetos">Gestor de Projetos</option>
+                                    <option value="Design">Design</option>
                                 </select>
                                 @error('work')
                                     <span class="invalid-feedback" role="alert">

@@ -3,6 +3,8 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\PostController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -21,9 +23,12 @@ Route::group(['middleware' => 'web'], function() {
 	Route::get('/home', [HomeController::class, 'index'])->name('index');
 });
 
-Route::get('{slug}', [ProfileController::class, 'show'])->name('show');
+// Profile
+
 Route::get('/changeuser', [HomeController::class, 'changeSlugUsers']);
 
+// Posts
 
+Route::get('/new_post', [PostController::class, 'createpost']);
 
-
+Route::get('/user/{slug}', [ProfileController::class, 'show'])->name('profile.show');
