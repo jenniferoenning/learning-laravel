@@ -28,7 +28,8 @@ Route::group(['middleware' => 'web'], function() {
 Route::get('/changeuser', [HomeController::class, 'changeSlugUsers']);
 
 // Posts
+Route::get('/post/new_post', [PostController::class, 'create'])->name('create.post');
+Route::post('/post', [PostController::class, 'store'])->name('store.post');
 
-Route::get('/new_post', [PostController::class, 'create'])->name('create.post');
 
 Route::get('/user/{slug}', [ProfileController::class, 'show'])->name('profile.show');

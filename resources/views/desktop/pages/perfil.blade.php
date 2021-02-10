@@ -20,5 +20,12 @@
 			</div>
         </div>
     </div>
+    <div class="row my-5">
+    	@foreach($user->posts as $post)
+    		<div class="col-4">
+    			<img src="/storage/{{ $post->image }}" alt="" class="w-100">
+    		</div>
+    	@endforeach
+    </div>
 </div>
 @endsection
