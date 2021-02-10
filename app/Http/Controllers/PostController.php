@@ -9,9 +9,8 @@ use Illuminate\Support\Str;
 
 class PostController extends Controller
 {
-	public function createpost()
+	public function create()
 	{
-		$slugUser = Auth::user()->name;
-        return view(PLATFORM . '.pages.createpost')->with(compact('slugUser'));
+        return view(PLATFORM . '.posts.create');
 	}
 }

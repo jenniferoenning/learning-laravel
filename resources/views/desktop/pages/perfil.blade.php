@@ -7,13 +7,16 @@
         	<img class="rounded-circle" width="200" height="200" src="{{ $user->avatarImage }}" alt="">
         </div>
         <div class="col-md-9">
-			<div class="card">
-				<h5 class="card-header text-dark font-weight-bold">{{ $user->name }}</h5>
-				<div class="card-body">
-					<h5 class="card-title">Descrição: {{ $user->description }}</h5>
-					<span class="card-text">E-mail: {{ $user->email }}</p>
-					<span class="card-text">Função: {{ $user->work }}</span>
-				</div>
+			<div class="d-flex justify-content-between align-items-baseline">
+				<h5 class="text-dark font-weight-bold">{{ $user->name }}</h5>
+				@if($userAuth->slug == $user->slug)
+				<a href="{{ route('create.post') }}">Adicionar um novo post</a>
+				@endif
+			</div>
+			<div>
+				<h5 class="card-title">Descrição: {{ $user->description }}</h5>
+				<span class="card-text">E-mail: {{ $user->email }}</p>
+				<span class="card-text">Função: {{ $user->work }}</span>
 			</div>
         </div>
     </div>

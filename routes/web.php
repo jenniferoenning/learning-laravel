@@ -29,6 +29,6 @@ Route::get('/changeuser', [HomeController::class, 'changeSlugUsers']);
 
 // Posts
 
-Route::get('/new_post', [PostController::class, 'createpost']);
+Route::get('/new_post', [PostController::class, 'create'])->name('create.post');
 
 Route::get('/user/{slug}', [ProfileController::class, 'show'])->name('profile.show');
