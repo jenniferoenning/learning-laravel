@@ -11,8 +11,6 @@
 
     <title>{{ config('site.title', 'ListDevs') }}</title>
     <link rel="icon" type="image/png" href="{{asset('images/icon.png')}}"/>
-    <!-- Scripts -->
-    <script src="{{ mix('js/app.js') }}" defer></script>
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
@@ -28,5 +26,7 @@
     </div>
 
     @stack('scripts')
+    <!-- Scripts -->
+    <script src="{{ mix('js/app.js') }}" defer></script>
 </body>
 </html>

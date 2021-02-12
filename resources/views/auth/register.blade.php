@@ -1,10 +1,10 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container px-4">
-    <div>
+<div class="min-h-screen flex flex-col sm:justify-center items-center pt-6 sm:pt-0 bg-gray-100">
+    <div class="w-full sm:max-w-md mt-6 px-6 py-4 bg-white shadow-md overflow-hidden sm:rounded-lg">
         <div>
-            <img class="rounded-full" src="" id="avatarShow" alt="">
+            <img src="" id="avatarShow" alt="">
         </div>
         <div>
             <div>
@@ -122,7 +122,7 @@
 @endsection
 
 @push('scripts')
-<script>
+<script type="text/javascript">
     function getImage(input) {
         var reader = new FileReader();
         reader.onload = function (e) {
