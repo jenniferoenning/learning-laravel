@@ -1,5 +1,5 @@
 <header>
-    <div class="relative bg-white blabla">
+    <div class="relative bg-white">
       <div class="max-w-7xl mx-auto px-4 sm:px-6">
         <div class="flex justify-between items-center border-b-2 border-gray-100 py-6 md:justify-start md:space-x-10">
           <div class="flex justify-start lg:w-0 lg:flex-1">
@@ -42,7 +42,6 @@
                   <div class="py-1" role="menu" aria-orientation="vertical" aria-labelledby="options-menu">
                     <a href="{{ route('logout') }}" onclick="event.preventDefault();document.getElementById('logout-form').submit();" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900" role="menuitem">{{ __('Deslogar') }}</a>
                     <a href="{{ route('profile.show', Auth::user()->slug) }}" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900" role="menuitem">Perfil</a>
-                    <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900" role="menuitem">License</a>
                     <form id="logout-form" method="POST" action="{{ route('logout') }}">
                       @csrf
                     </form>
