@@ -20,8 +20,3 @@ Caso tenha interesse de ajudar neste projeto fiquem a vontade para utilizar a fe
 5 - Para criar o link simbólico, você pode executar `php artisan storage:link`.
 
 - Thanks for visiting! :D
-
-## Algumas telas
-
-![alt text](https://i.imgur.com/92j78Dr.png)
-![alt text](https://i.imgur.com/3acD5JJ.png)
