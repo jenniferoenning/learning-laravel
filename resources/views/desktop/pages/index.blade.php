@@ -4,7 +4,7 @@
 <div class="xl:container mx-auto mt-10">
     <div class="grid grid-cols-3 gap-4">
         @foreach($users as $user)
-            <div class="max-w-sm bg-white border-2 border-gray-300 p-6 rounded-md tracking-wide shadow-lg">
+            <div class="max-w-sm bg-white border-1 border-gray-300 p-6 rounded-md tracking-wide shadow-lg">
                 <div id="header" class="flex items-center mb-4"> 
                     <img alt="avatar" class="w-20 rounded-full border-2 border-gray-300" src="{{$user->avatarImage}}" />
                     <div id="header-text" class="leading-5 ml-6 sm">
