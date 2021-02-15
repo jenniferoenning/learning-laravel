@@ -3,6 +3,7 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Models\Post;
+use App\Http\Controllers\Api\HomeController;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,15 +16,9 @@ use App\Models\Post;
 |
 */ 
 
-route::get('/posts' ,function() {
-	$post = Post::create([
-		'post_title' => 'Meu primeiro post',
-		'post_slug' => 'meu-primeiro-post'
-	]);
-
-	return $post;
-});
-
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+
+Route::get('/posts',[HomeController::class,'getPosts']);
