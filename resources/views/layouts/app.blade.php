@@ -10,7 +10,7 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
     <title>{{ config('site.title', 'ListDevs') }}</title>
-    <link rel="icon" type="image/png" href="{{asset('images/icon.png')}}"/>
+    <link rel="icon" type="image/png" href="{{asset('images/icon.svg')}}"/>
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
