@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="min-h-screen flex flex-col sm:justify-center items-center pt-6 sm:pt-0 bg-gray-100">
+<div class="min-h-screen flex flex-col sm:justify-center items-center pt-6 sm:pt-0 bg-purple-600">
     <div class="w-full sm:max-w-md mt-6 px-6 py-4 bg-white shadow-md overflow-hidden sm:rounded-lg">
         <div>
             <div>
@@ -21,7 +21,7 @@
                             <label for="email">{{ __('Endereço de e-mail') }}</label>
 
                             <div>
-                                <input id="email" type="email" class="form-control @error('email') is-invalid @enderror border-2 border-gray-300 rounded p-2 w-full focus:outline-none focus:ring focus:border-blue-300" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
+                                <input id="email" type="email" class="form-control @error('email') is-invalid @enderror border border-gray-300 rounded p-2 w-full focus:outline-none focus:ring focus:border-blue-300" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
 
                                 @error('email')
                                     <span class="invalid-feedback" role="alert">

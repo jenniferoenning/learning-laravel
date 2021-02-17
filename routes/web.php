@@ -18,18 +18,20 @@ use App\Http\Controllers\PostController;
 */
 
 Route::group(['middleware' => 'web'], function() {
-	Route::get('/', [HomeController::class, 'index']);
 	Auth::routes();
-	Route::get('/home', [HomeController::class, 'index'])->name('index');
 });
 
+Route::get('/', [HomeController::class, 'index']);
+Route::get('/home', [HomeController::class, 'index'])->name('index');
 // Profile
 
 Route::get('/changeuser', [HomeController::class, 'changeSlugUsers']);
 
 // Posts
-Route::get('/post/new_post', [PostController::class, 'create'])->name('create.post');
 Route::post('/post', [PostController::class, 'store'])->name('store.post');
+Route::get('/posts', [PostController::class, 'show'])->middleware('auth')->name('show.posts');
+Route::get('/post/new_post', [PostController::class, 'create'])->name('create.post');
+Route::get('/post/edit_post', [PostController::class, 'edit'])->name('edit.post');
 
 
-Route::get('/user/{slug}', [ProfileController::class, 'show'])->name('profile.show');
+Route::get('/user/{slug}', [ProfileController::class, 'show'])->middleware('auth')->name('profile.show');

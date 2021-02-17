@@ -14,3 +14,10 @@
     font-weight: 600;
     src: url(../fonts/avalon/Avalon_Bold.ttf)
 }
+
+.image-post 
+{
+  width: 350px;
+  height: 350px;
+  object-fit: cover;
+}

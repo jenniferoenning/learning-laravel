@@ -40,4 +40,11 @@ class PostController extends Controller
 
 		return redirect('/user/' . auth()->user()->slug);
 	}
+
+	public function show ()
+	{
+		$user = Auth::user();
+
+		return view(PLATFORM . '.posts.posts')->with(compact('user'));
+	}
 }

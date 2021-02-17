@@ -16,7 +16,8 @@
         "jenssegers/agent": "^2.6",
         "laravel/framework": "^8.12",
         "laravel/tinker": "^2.5",
-        "laravel/ui": "^3.2"
+        "laravel/ui": "^3.2",
+        "livewire/livewire": "^2.3"
     },
     "require-dev": {
         "facade/ignition": "^2.5",
@@ -53,10 +54,11 @@
     "scripts": {
         "post-autoload-dump": [
             "Illuminate\\Foundation\\ComposerScripts::postAutoloadDump",
-            "@php artisan package:discover --ansi"
+            "@php artisan package:discover --ansi",
+            "@php artisan vendor:publish --force --tag=livewire:assets --ansi"
         ],
         "post-root-package-install": [
-            "@php -r \"file_exists('.env') || copy('.env.example', '.env');\""
+            "@php -r \"file_exists('.env') || copy('.env.example', '.env');\","
         ],
         "post-create-project-cmd": [
             "@php artisan key:generate --ansi"

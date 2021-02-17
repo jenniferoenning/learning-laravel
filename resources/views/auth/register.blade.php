@@ -1,10 +1,18 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="min-h-screen flex flex-col sm:justify-center items-center pt-6 sm:pt-0 bg-gray-100">
+<div class="min-h-screen flex flex-col sm:justify-center items-center pt-6 sm:pt-0 bg-purple-600">
     <div class="w-full sm:max-w-md mt-6 px-6 py-4 bg-white shadow-md overflow-hidden sm:rounded-lg">
+        <div class="flex justify-between">
+            <h3 class="text-3xl">{{ __('Registre-se') }}</h3>
+              @if (Route::has('login'))
+                <a href="{{ route('login') }}" class="text-base font-medium text-purple-600 self-center hover:text-purple-500">
+                  {{ __('Login') }}
+                </a>
+              @endif
+        </div>
         <div class="flex">
-            <div class="py-3 items-center mx-auto">
+            <div class="py-1 items-center mx-auto">
                 <div class="bg-white px-4 py-5 rounded-lg shadow-lg text-center w-48">
                     <div class="mb-4">
                         <img class="w-auto mx-auto rounded-full object-cover object-center" id="avatarShow" src="https://i1.pngguru.com/preview/137/834/449/cartoon-cartoon-character-avatar-drawing-film-ecommerce-facial-expression-png-clipart.jpg" alt="Avatar Upload" />
@@ -18,13 +26,12 @@
         </div>
         <div>
             <div>
-                <div class="text-3xl">{{ __('Registre-se') }}</div>
 
                 <div>
                     <form method="POST" action="{{ route('register') }}" enctype="multipart/form-data">
                         @csrf
 
-                        <div class="mt-5">
+                        <div class="mt-3">
                             <label for="name">{{ __('Nome') }}</label>
 
                             <div>
@@ -38,7 +45,7 @@
                             </div>
                         </div>
 
-                        <div class="mt-5">
+                        <div class="mt-3">
                             <label for="description">{{ __('Descrição') }}</label>
 
                             <div>
@@ -52,7 +59,7 @@
                             </div>
                         </div>
 
-                        <div class="mt-5">
+                        <div class="mt-3">
                             <label for="work">{{ __('Função') }}</label>
 
                             <div>
@@ -74,7 +81,7 @@
                             </div>
                         </div>
 
-                        <div class="mt-5">
+                        <div class="mt-3">
                             <label for="email">{{ __('Endereço de E-Mail') }}</label>
 
                             <div class="col-md-6">
@@ -88,7 +95,7 @@
                             </div>
                         </div>
 
-                        <div class="mt-5">
+                        <div class="mt-3">
                             <label for="password">{{ __('Senha') }}</label>
 
                             <div>
@@ -102,7 +109,7 @@
                             </div>
                         </div>
 
-                        <div class="mt-5">
+                        <div class="mt-3">
                             <label for="password-confirm">{{ __('Confirme a senha') }}</label>
 
                             <div>
@@ -110,7 +117,7 @@
                             </div>
                         </div> 
 
-                        <div class="mt-5">
+                        <div class="mt-3">
                             <div>
                                 <button class="px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-purple-500 hover:bg-purple-400" type="submit">
                                     {{ __('Registrar') }}

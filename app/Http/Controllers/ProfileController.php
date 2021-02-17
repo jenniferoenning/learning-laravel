@@ -28,11 +28,8 @@ class ProfileController extends Controller
     public function show($slug)
     {
         $userAuth = Auth::user();
-        $user = User::all()->where('slug', $slug)->first();
-        if(!$userAuth == null && !$user == null){
-            return view(PLATFORM . '.pages.perfil')->with(compact('user','userAuth'));
-        }else{
-            abort(404);
-        }
+        $user = User::where('slug', $slug)->firstOrFail();
+        
+        return view(PLATFORM . '.pages.perfil')->with(compact('user','userAuth'));
     }
 }
