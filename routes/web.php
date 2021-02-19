@@ -31,7 +31,8 @@ Route::get('/changeuser', [HomeController::class, 'changeSlugUsers']);
 Route::post('/post', [PostController::class, 'store'])->name('store.post');
 Route::get('/posts', [PostController::class, 'show'])->middleware('auth')->name('show.posts');
 Route::get('/post/new_post', [PostController::class, 'create'])->name('create.post');
-Route::get('/post/edit_post', [PostController::class, 'edit'])->name('edit.post');
+Route::get('/posts/{id}/edit', [PostController::class, 'edit'])->name('post.edit');
+Route::patch('/posts/{id}', [PostController::class, 'update'])->name('post.update');
 
 
 Route::get('/user/{slug}', [ProfileController::class, 'show'])->middleware('auth')->name('profile.show');

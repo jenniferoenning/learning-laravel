@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use App\Models\User;
+use App\Models\Post;
 use Illuminate\Support\Str;
 use Intervention\Image\Facades\Image;
 
@@ -46,5 +47,22 @@ class PostController extends Controller
 		$user = Auth::user();
 
 		return view(PLATFORM . '.posts.posts')->with(compact('user'));
+	}
+
+	public function edit ($id)
+	{
+		$post = Auth::user()->posts->where('id', $id)->first();
+
+		return view(PLATFORM . '.posts.edit')->with(compact('post'));
+	}
+
+	public function update($id)
+	{
+		$data = request()->validate([
+			'caption' => 'required',
+			'image' => ''
+		]);
+
+		dd($data);
 	}
 }
