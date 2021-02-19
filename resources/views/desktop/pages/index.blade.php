@@ -3,7 +3,7 @@
 @section('content')
 <div class="xl:container mx-auto mt-10">
     <div class="grid grid-cols-3 gap-4">
-        @foreach($users as $user)
+        @foreach($users->reverse() as $user)
             <a href="{{ route('profile.show', $user->slug) }}">
                 <div class="max-w-sm bg-white border-1 border-gray-300 p-6 rounded-md tracking-wide shadow-lg  transform  hover:scale-105 transition duration-500 ease-in-out hover:bg-gray-100">
                     <div id="header" class="flex items-center mb-4"> 
