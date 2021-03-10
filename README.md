@@ -15,7 +15,7 @@ Caso tenha interesse de ajudar neste projeto fiquem a vontade para utilizar a fe
     
 3 - Crie o banco de dados configure seu `.env.example` para `.env`, seu banco de dados também e adicione a variável `APP_URL=[ URL DO SEU SITE LOCAL ]`.
 
-4 - Para executar todas as suas migrations pendentes, execute o  `composer artisan migrate`.
+4 - Para executar todas as suas migrations pendentes, execute o  `php artisan migrate`.
 
 5 - Para criar o link simbólico, você pode executar `php artisan storage:link`.
 
